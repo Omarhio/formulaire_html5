@@ -8,7 +8,92 @@
 </head>
 
 <body>
+    <fieldset>
+        <h1>Formulaire d'inscription</h1>
 
+        <form action="/submit" method="post">
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" pattern="[a-z][A-Z]" required placeholder="Prénom">
+            <br><br>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required placeholder="Nom">
+            <br><br>
+
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" min="0" required placeholder="Âge">
+            <br><br>
+
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance" required>
+            <br><br>
+
+            <label for="sexe">Sexe :</label>
+            <input type="radio" id="sexe" name="sexe" value="male"> Homme
+            <input type="radio" name="sexe" value="female"> Femme            
+            <br><br>
+
+            <label for="email">Adresse Mail :</label>
+            <input type="email" id="email" pattern=".+@example\.com" size="30" required placeholder="exemple@mail.com">
+            <br><br>
+
+            <label for="adresse">Adresse postale :</label>
+            <input type="text" id="adresse" name="adresse" required placeholder="Adresse">
+            <br><br>
+
+            <label for="code_postal">Code postal :</label>
+            <input type="text" id="code_postal" name="code_postal" maxlength="5" pattern="[0-9]" placeholder="75000">
+            <br><br>
+
+            <label for="ville">Ville :</label>
+            <input type="text" id="ville" name="ville" required placeholder="Paris">
+            <br><br>
+
+            <label for="metier">Métier exercé :</label>
+            <select name="metier" id="metier" required>
+                <option value="">Choisir une option</option>
+                <option value="Marchand">Marchand</option>
+                <option value="Ingénieur">Ingénieur</option>
+                <option value="Mécanicien">Mécanicien</option>
+                <option value="Professeur">Professeur</option>
+                <option value="Médecin">Médecin</option>
+            </select>
+            <br><br>
+
+            <label for="nationalite">Nationalité :</label>
+            <input type="text" id="nationalite" name="nationalite" required placeholder="France">
+            <br><br>
+
+            <label for="pays_naissance">Pays de naissance :</label>
+            <input type="text" id="pays_naissance" name="pays_naissance" required>
+            <br><br>
+
+            <label for="securite_sociale">Numéro de sécurité sociale :</label>
+            <input type="text" id="securite_sociale" name="securite_sociale" maxlength="13" pattern="[0-9]" required placeholder="X XX XX XX XXX XXX">
+            <label for="securite_socialekey">key :</label>
+            <input type="text" id="securite_socialekey" size=2 name="securite_sociale_key" maxlength="2" pattern="[0-9]" required placeholder="XX">
+            <br><br>
+
+            <label for="passeport">Numéro de passeport :</label>
+            <input type="text" id="passeport" name="passeport" pattern="\b[0-9]{2}[a-z]{2}[0-9]{5}\b" required>
+            <br><br>
+
+            <label for="date_delivrance_passeport">Date de délivrance du passeport :</label>
+            <input type="date" id="date_delivrance_passeport" name="date_delivrance_passeport" required>
+            <br><br>
+
+            <label for="date_validite_passeport">Date de validité du passeport :</label>
+            <input type="date" id="date_validite_passeport" name="date_validite_passeport" required>
+            <br><br>
+
+            <input type="submit" value="Soumettre">
+        </form>
+    </fieldset>
+
+    <footer>
+        <p>© 2024 Omarhio</p>
+    </footer>
 </body>
 
 </html>
